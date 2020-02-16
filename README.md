@@ -1,7 +1,7 @@
 # EfficientNet.PyTorch
 PyTorch implementation of EfficientNet
 
-Details about the models are below: 
+### Details about the models are below: 
 
 |    *Name*         |*# Params*|*Top-1 Acc.*|*Pretrained?*|
 |:-----------------:|:--------:|:----------:|:-----------:|
