@@ -1,3 +1,16 @@
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
+# LightNet++: Boosted Light-weighted Networks for Real-time Semantic Segmentation
+# ---------------------------------------------------------------------------------------------------------------- #
+# PyTorch implementation for EfficientNet
+# class:
+#       > Swish
+#       > SEBlock
+#       > MBConvBlock
+#       > EfficientNet
+# ---------------------------------------------------------------------------------------------------------------- #
+# Author: Huijun Liu M.Sc.
+# Date:   08.02.2020
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
 from torch.nn import functional as F
 from collections import OrderedDict
 
@@ -6,6 +19,9 @@ import torch
 import math
 
 
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
+# Swish: Swish Activation Function
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
 class Swish(nn.Module):
     def __init__(self, inplace=True):
         super(Swish, self).__init__()
@@ -54,6 +70,9 @@ class SEBlock(nn.Module):
         return torch.mul(x, x_se)
 
 
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
+# MBConvBlock: MBConvBlock for EfficientNet
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
 class MBConvBlock(nn.Module):
     def __init__(self, in_planes, out_planes,
                  expand_ratio,  kernel_size, stride, dilate,
@@ -116,6 +135,9 @@ class MBConvBlock(nn.Module):
         return x
 
 
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
+# EfficientNet: EfficientNet Implementation
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
 class EfficientNet(nn.Module):
     def __init__(self, arch="bo", num_classes=1000):
         super(EfficientNet, self).__init__()
