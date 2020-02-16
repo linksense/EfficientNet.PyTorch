@@ -1,5 +1,5 @@
 # EfficientNet.PyTorch
-PyTorch implementation of EfficientNet
+This repository contains a concise, modular, human-friendly PyTorch implementation of EfficientNet with Pre-trained weights.
 
 ### Result Details(Val.)
 
