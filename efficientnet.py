@@ -260,8 +260,17 @@ if __name__ == "__main__":
 
     os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-    model_str = "b0"
-    model = EfficientNet(arch=model_str, num_classes=1000)
+    arch = "b6"
+    img_preparam = {"b0": (224, 0.875),
+                    "b1": (240, 0.882),
+                    "b2": (260, 0.890),
+                    "b3": (300, 0.904),
+                    "b4": (380, 0.922),
+                    "b5": (456, 0.934),
+                    "b6": (528, 0.942),
+                    "b7": (600, 0.949)}
+    net_h = img_preparam[arch][0]
+    model = EfficientNet(arch=arch, num_classes=1000)
     optimizer = torch.optim.SGD(model.parameters(), lr=1e-1,
                                 momentum=0.90, weight_decay=1.0e-4, nesterov=True)
     

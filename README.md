@@ -1,9 +1,13 @@
 # EfficientNet.PyTorch
 This repository contains a concise, modular, human-friendly **PyTorch** implementation of **[EfficientNet](https://arxiv.org/abs/1905.11946)** with **[Pre-trained Weights](https://drive.google.com/open?id=1C5IhQd8UfvVY32GYhyQAjvY92IzPi7fY)**.
 
+
 ## Dependencies
 
 - [PyTorch(1.4.1+)](http://pytorch.org)  
+- [torchstat](https://github.com/Swall0w/torchstat)  
+- [pytorch_memlab](https://github.com/Stonesjtu/pytorch_memlab)  
+
 
 ## Result Details(Val.)
 
