@@ -3,7 +3,7 @@ PyTorch implementation of EfficientNet
 
 ### Result Details(Val.)
 
-|    *Name*         |*# Params*|* # FLOPS*  |*Top-1 Acc.*| *Pretrained* |
+|    *Name*         |*# Params*| *# FLOPS*  |*Top-1 Acc.*| *Pretrained* |
 |:-----------------:|:--------:|:----------:|:----------:|:------------:|
 | `efficientnet-b0` |   5.3M   |    0.39B   |    74.2    | [GoogleDrive](https://drive.google.com/open?id=1GAB04ft47OhmG_AbrQCcYiezJ8o00veX) |
 | `efficientnet-b1` |   7.8M   |    0.70B   |    78.0    | [GoogleDrive](https://drive.google.com/open?id=1h_JT21EcPEmy7eNgnbI4-ORwRVJNxGsu) |
