@@ -7,7 +7,6 @@ import torchvision.transforms as transforms
 
 from PIL import Image
 from tqdm import tqdm
-from models.efficientnet import EfficientNet
 
 
 class AverageMeter(object):
@@ -49,6 +48,7 @@ def accuracy(output, target, topk=(1,)):
 
 
 if __name__ == "__main__":
+    from efficientnet import EfficientNet
     data_root = "/home/liuhuijun/Datasets/ImageNet"
     val_dir = os.path.join(data_root, 'val')
     normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
